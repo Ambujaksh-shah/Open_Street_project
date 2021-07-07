@@ -98,7 +98,8 @@ TEST_F(RoutePlannerTest, TestConstructFinalPath) {
     // Construct a path.
     mid_node->parent = start_node;
     end_node->parent = mid_node;
-    std::vector<RouteModel::Node>
+    std::vector<RouteModel::Node> path = route_planner.ConstructFinalPath(end_node);
+
 
     // Test the path.
     EXPECT_EQ(path.size(), 3);
